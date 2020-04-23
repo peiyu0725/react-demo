@@ -1,9 +1,9 @@
 const path = require('path');
 module.exports = {
     //如果有一個以上的檔案需要打包，可以傳陣列給entry
-    entry: ['./index.js', './app.jsx'],
+    entry: ['./src/index.js', './src/app.jsx'],
     output: {
-        filename: 'bundle.js',
+        filename: 'src/bundle.js',
         path: path.resolve(__dirname, './'),
     },
     //將loader的設定寫在module的rules屬性中
@@ -31,8 +31,5 @@ module.exports = {
                 } 
             }
         ]
-    },
-    devServer: {
-        historyApiFallback: true
     }
 };
